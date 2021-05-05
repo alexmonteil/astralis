@@ -1,13 +1,17 @@
 
 const mongoose = require("mongoose");
+require("dotenv").config();
 const cities = require("./cities");
 const { places, descriptors } = require("./seedhelpers");
 const Starport = require("../models/starport");
+const dbUrl = process.env.DB_URL;
 
-mongoose.connect("mongodb://localhost:27017/astralis", {
+
+mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useCreateIndex: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: false
 });
 
 
@@ -150,7 +154,7 @@ const seedDB = async () => {
         const random1000 = Math.floor(Math.random() * 1000);
         const price = Math.floor(Math.random() * 20) + 10;
         const starport = new Starport({
-            author: "6087a5827da4bf65aeab8773",
+            author: "6092041fd744294dcff28c39",
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
             geometry: { 
@@ -163,7 +167,7 @@ const seedDB = async () => {
             images: [
                 sample(seedImages)
             ],
-            description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae sequi fugit cumque necessitatibus! Quod, fuga?",
+            description: "This location is incredible, it freezes you in time, and naturally pulls you in the grandeur and wonders of the cosmos, some people call it the cosmic gate...",
             price
         });
         await starport.save();

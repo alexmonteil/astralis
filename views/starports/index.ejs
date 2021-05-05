@@ -4,29 +4,30 @@
 <div>
     <a href="/starports/new">Add Starport</a>
 </div>
-
-<% for (let starport of starports) { %>
-    <div class="card mb-3">
-        <div class="row">
-            <div class="col-md-4">
-                <% if (starport.images.length) { %>
-                    <img class="img-fluid" src="<%= starport.images[0].url %>" width="auto" height="250" alt="">
-                <% } else { %>
-                    <img class="img-fluid" src="https://res.cloudinary.com/saguarosmart/image/upload/v1620157129/Astralis/night-skies34_twhkw5.jpg" width="auto" height="250" alt="">
-                <% } %>
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title"><%= starport.title %></h5>
-                    <p class="card-text"><%= starport.description %></p>
-                    <p class="card-text">
-                        <small class="text-muted"><%= starport.location %></small>
-                    </p>
-                    <a href="/starports/<%= starport.id %>" class="btn btn-primary">View <%= starport.title %></a>
+<% if (starports) { %>
+    <% for (let starport of starports) { %>
+        <div class="card mb-3">
+            <div class="row">
+                <div class="col-md-4">
+                    <% if (starport.images.length) { %>
+                        <img class="img-fluid" src="<%= starport.images[0].url %>" width="auto" height="250" alt="">
+                    <% } else { %>
+                        <img class="img-fluid" src="https://res.cloudinary.com/saguarosmart/image/upload/v1620157129/Astralis/night-skies34_twhkw5.jpg" width="auto" height="250" alt="">
+                    <% } %>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= starport.title %></h5>
+                        <p class="card-text"><%= starport.description %></p>
+                        <p class="card-text">
+                            <small class="text-muted"><%= starport.location %></small>
+                        </p>
+                        <a href="/starports/<%= starport.id %>" class="btn btn-primary">View <%= starport.title %></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    <% } %>
 <% } %>
 
 
