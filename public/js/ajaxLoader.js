@@ -1,7 +1,7 @@
 const h1 = document.querySelector("h1");
 const loaderDiv = document.querySelector("div.ajaxLoader");
 const form = document.querySelector("form");
-const submitBtn = document.querySelector("button.btn.btn-secondary");
+const submitBtn = document.querySelector("button.btn");
 const anchor = document.querySelector("a#ajax");
 const imageInput = document.querySelector("input#image");
 

@@ -20,7 +20,9 @@ const StarportSchema = new Schema({
     title: {
         type: String,
         required: true,
-        trim: true
+        trim: true,
+        minLength: 5,
+        maxLength: 60
     },
     images: [ImageSchema],
     geometry: {
@@ -42,12 +44,16 @@ const StarportSchema = new Schema({
     description: {
         type: String,
         required: true,
-        trim: true
+        trim: true,
+        minLength: 5,
+        maxLength: 280
     },
     location: {
         type: String,
         required: true,
-        trim: true
+        trim: true,
+        minLength: 5,
+        maxLength: 90
     },
     author: {
         type: Schema.Types.ObjectId,

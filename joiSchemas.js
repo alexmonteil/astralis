@@ -40,10 +40,10 @@ const userSchema = Joi.object({
 
 const starportSchema = Joi.object({
     starport: Joi.object({
-        title: Joi.string().required().escapeHTML(),
+        title: Joi.string().min(5).max(60).required().escapeHTML(),
         price: Joi.number().required().min(0),
-        location: Joi.string().required().escapeHTML(),
-        description: Joi.string().required().escapeHTML()
+        location: Joi.string().min(5).max(90).required().escapeHTML(),
+        description: Joi.string().min(5).max(280).required().escapeHTML()
     }).required(),
     deleteImages: Joi.array()
 });
@@ -52,7 +52,7 @@ const starportSchema = Joi.object({
 const reviewSchema = Joi.object({
     review: Joi.object({
         rating: Joi.number().min(0).max(5).required(),
-        body: Joi.string().required().escapeHTML()
+        body: Joi.string().min(5).max(280).required().escapeHTML()
     }).required()
 });
 

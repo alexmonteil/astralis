@@ -8,15 +8,15 @@
         <form action="/starports" method="post" class="validated-form" enctype="multipart/form-data">
             <div class="mb-3">
                 <label class="form-label" for="title">Title</label>
-                <input class="form-control" type="text" name="starport[title]" id="title" required>
+                <input class="form-control" type="text" name="starport[title]" id="title" minlength="5" maxlength= "60" required>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="location">Location</label>
-                <input class="form-control" type="text" name="starport[location]" id="location" required>
+                <input class="form-control" type="text" name="starport[location]" id="location" minlength="5" maxlength="90" required>
             </div>
             <div class="mb-3">
                 <label for="image" class="form-label">Upload images</label>
-                <input class="form-control" type="file" id="image" name="image" accept=".jpg,.jpeg,.png" multiple>
+                <input class="form-control" type="file" id="image" name="image" accept=".jpg,.jpeg,.png" multiple max="4">
             </div>
             <div class="mb-3">
                 <label class="form-label" for="price">Starport Price</label>
@@ -27,7 +27,7 @@
             </div>
             <div class="mb-3">
                 <label class="form-label" for="description">Description</label>
-                <textarea class="form-control" type="text" name="starport[description]" id="description" required></textarea>
+                <textarea class="form-control" type="text" name="starport[description]" id="description" minlength="5" maxlength="280" required></textarea>
             </div>
             <div class="mb-3">
                 <button class="btn btn-secondary" type="submit">Add Starport</button>

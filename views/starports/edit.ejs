@@ -1,34 +1,33 @@
 <% layout("layouts/boilerplate") %>
 <div class="row">
     <h1 class="text-center">Edit Starport</h1>
-    <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3">  
-        <form action="/starports/<%= starport._id %>?_method=PUT" method="post" class="validated-form" enctype="multipart/form-data" novalidate>
+    <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3">
+        <div class="ajaxLoader position-absolute top-50 start-50 translate-middle text-center">
+            <img src="/img/loading.gif" style="width: 300px; height: auto;" alt="loading animation">
+        </div>  
+        <form action="/starports/<%= starport._id %>?_method=PUT" method="post" class="validated-form" enctype="multipart/form-data">
             <div class="mb-3">
                 <label class="form-label" for="title">Title</label>
-                <input class="form-control" type="text" name="starport[title]" id="title" value="<%= starport.title %>" required>
-                <div class="valid-feedback">Looks good!</div>
+                <input class="form-control" type="text" name="starport[title]" id="title" value="<%= starport.title %>" minlength="5" maxlength= "60" required>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="location">Location</label>
-                <input class="form-control" type="text" name="starport[location]" id="location" value="<%= starport.location %>" required>
-                <div class="valid-feedback">Looks good!</div>
+                <input class="form-control" type="text" name="starport[location]" id="location" value="<%= starport.location %>" minlength="5" maxlength="90" required>
             </div>
             <div class="mb-3">
                 <label for="image" class="form-label">Add more images</label>
-                <input class="form-control" type="file" id="image" name="image" multiple>
+                <input class="form-control" type="file" id="image" name="image" multiple max="4">
             </div>
             <div class="mb-3">
                 <label class="form-label" for="price">Starport Price</label>
                 <div class="input-group">
                     <span class="input-group-text" id="basic-addon1">$</span>
                     <input type="text" class="form-control" id="price" name="starport[price]" value="<%= starport.price %>" aria-label="price" aria-describedby="price-label" required>
-                    <div class="valid-feedback">Looks good!</div>
                 </div>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="description">Description</label>
-                <textarea class="form-control" type="text" name="starport[description]" id="description" required><%= starport.description %></textarea>
-                <div class="valid-feedback">Looks good!</div>
+                <textarea class="form-control" type="text" name="starport[description]" id="description" minlength="5" maxlength="280" required><%= starport.description %></textarea>
             </div>
             <div class="mb-3">
                 <% starport.images.forEach((img, i) => { %>
@@ -43,6 +42,7 @@
                 <button class="btn btn-info" type="submit">Update Starport</button>
             </div>
         </form>
-        <a href="/starports/<%= starport._id %>">Back to Starport</a>
+        <a id="ajax" href="/starports/<%= starport._id %>">Back to Starport</a>
     </div>
 </div>
+<script src="/js/ajaxLoader.js"></script>
