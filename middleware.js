@@ -6,6 +6,9 @@ const Review = require("./models/review");
 
 const isLoggedIn = (req, res, next) => {
     if (!req.isAuthenticated()) {
+        if (req.originalUrl.includes("/reviews")) {
+            req.originalUrl = req.originalUrl.replace("/reviews", "");
+        }
         req.session.returnTo = req.originalUrl;
         req.flash("error", "You must be signed in");
         return res.redirect("/login");
