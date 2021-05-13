@@ -59,3 +59,16 @@ p.demo {
     font-size: 0.9rem;
     color: #555;
 }
+
+.btn-primary {
+
+    background-color: #283a75 !important;
+    border-color: #283a75 !important;
+
+}
+
+.btn-primary:hover {
+
+    background-color: #455485 !important;
+    border-color: #455485 !important;
+}
