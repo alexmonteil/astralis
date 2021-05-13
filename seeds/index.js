@@ -143,7 +143,84 @@ const seedImages = [
     {
         url: "https://res.cloudinary.com/saguarosmart/image/upload/v1620155898/Astralis/night-skies33_jolpes.jpg",
         filename: "Astralis/night-skies33_jolpes"
+    },
+    {
+        url: "https://res.cloudinary.com/saguarosmart/image/upload/v1620157129/Astralis/night-skies34_twhkw5.jpg",
+        filename: "Astralis/night-skies34_twhkw5"
+    },
+    {
+        url: "https://res.cloudinary.com/saguarosmart/image/upload/v1620925630/Astralis/night-skies35_a3p6re.jpg",
+        filename: "Astralis/night-skies35_a3p6re"
+    },
+    {
+        url: "https://res.cloudinary.com/saguarosmart/image/upload/v1620925633/Astralis/night-skies36_ltecxg.jpg",
+        filename: "Astralis/night-skies36_ltecxg"
+    },
+    {
+        url: "https://res.cloudinary.com/saguarosmart/image/upload/v1620925632/Astralis/night-skies37_oy7qit.jpg",
+        filename: "Astralis/night-skies37_oy7qit"
+    },
+    {
+        url: "https://res.cloudinary.com/saguarosmart/image/upload/v1620925635/Astralis/night-skies38_shbytt.jpg",
+        filename: "Astralis/night-skies38_shbytt"
+    },
+    {
+        url: "https://res.cloudinary.com/saguarosmart/image/upload/v1620925628/Astralis/night-skies39_mt2cb0.jpg",
+        filename: "Astralis/night-skies39_mt2cb0"
+    },
+    {
+        url: "https://res.cloudinary.com/saguarosmart/image/upload/v1620925637/Astralis/night-skies40_xof7po.jpg",
+        filename: "Astralis/night-skies40_xof7po"
+    },
+    {
+        url: "https://res.cloudinary.com/saguarosmart/image/upload/v1620925635/Astralis/night-skies41_gacega.jpg",
+        filename: "Astralis/night-skies41_gacega"
+    },
+    {
+        url: "https://res.cloudinary.com/saguarosmart/image/upload/v1620925632/Astralis/night-skies42_v5p5sy.jpg",
+        filename: "Astralis/night-skies42_v5p5sy"
+    },
+    {
+        url: "https://res.cloudinary.com/saguarosmart/image/upload/v1620925635/Astralis/night-skies43_s5ghsw.jpg",
+        filename: "Astralis/night-skies43_s5ghsw"
+    },
+    {
+        url: "https://res.cloudinary.com/saguarosmart/image/upload/v1620925637/Astralis/night-skies44_oszmyo.jpg",
+        filename: "Astralis/night-skies44_oszmyo"
+    },
+    {
+        url: "https://res.cloudinary.com/saguarosmart/image/upload/v1620925638/Astralis/night-skies45_n4gama.jpg",
+        filename: "Astralis/night-skies45_n4gama"
+    },
+    {
+        url: "https://res.cloudinary.com/saguarosmart/image/upload/v1620925694/Astralis/night-skies46_hdqel6.jpg",
+        filename: "Astralis/night-skies46_hdqel6"
+    },
+    {
+        url: "https://res.cloudinary.com/saguarosmart/image/upload/v1620925694/Astralis/night-skies47_gcphyp.jpg",
+        filename: "Astralis/night-skies47_gcphyp"
+    },
+    {
+        url: "https://res.cloudinary.com/saguarosmart/image/upload/v1620925694/Astralis/night-skies48_rsxlv9.jpg",
+        filename: "Astralis/night-skies48_rsxlv9"
+    },
+    {
+        url: "https://res.cloudinary.com/saguarosmart/image/upload/v1620925911/Astralis/night-skies49_cps9bn.jpg",
+        filename: "Astralis/night-skies49_cps9bn"
+    },
+    {
+        url: "https://res.cloudinary.com/saguarosmart/image/upload/v1620925911/Astralis/night-skies50_bzhgay.jpg",
+        filename: "Astralis/night-skies50_bzhgay"
+    },
+    {
+        url: "https://res.cloudinary.com/saguarosmart/image/upload/v1620926146/Astralis/night-skies51_zg7gux.jpg",
+        filename: "Astralis/night-skies51_zg7gux"
+    },
+    {
+        url: "https://res.cloudinary.com/saguarosmart/image/upload/v1620926146/Astralis/night-skies52_mwvwnx.jpg",
+        filename: "Astralis/night-skies52_mwvwnx"
     }
+
 ];
 
 
