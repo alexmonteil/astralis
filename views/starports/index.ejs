@@ -30,10 +30,11 @@
     <% } %>
 <% } %>
 
-
+<button id="btnTop" title="Go to top">&uarr;</button>
+<script src="/js/buttonTop.js"></script>
 <script>
     const mapToken = "<%- process.env.MAPBOX_TOKEN %>";
     const starports = { features: <%- JSON.stringify(starports) %> };
 </script>
-
 <script src="/js/clusterMap.js"></script>
+
