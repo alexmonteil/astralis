@@ -83,7 +83,7 @@ const deleteStarport = async (req, res) => {
             await cloudinary.uploader.destroy(file.filename);
         }
     }
-    req.flash("success", "Succesfully deleted starport!");
+    req.flash("success", "Successfully deleted starport!");
     res.redirect("/starports");
 };
 
